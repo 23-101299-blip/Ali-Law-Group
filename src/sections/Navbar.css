@@ -1,0 +1,127 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    color: white;
+    /* High contrast on dark hero */
+}
+
+.navbar.scrolled {
+    background-color: var(--bg-primary);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.navbar-logo span {
+    color: var(--accent-secondary);
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--accent-secondary);
+}
+
+.theme-toggle {
+    color: var(--text-primary);
+    /* Use text color for better visibility */
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    /* Add border for visibility in light mode */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+.mobile-actions {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menu-toggle {
+    color: var(--text-primary);
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-nav-item {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-actions {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
