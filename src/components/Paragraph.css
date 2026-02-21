@@ -1,0 +1,17 @@
+.paragraph {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.p-sm {
+    font-size: 0.875rem;
+}
+
+.p-md {
+    font-size: 1rem;
+}
+
+.p-lg {
+    font-size: 1.125rem;
+}

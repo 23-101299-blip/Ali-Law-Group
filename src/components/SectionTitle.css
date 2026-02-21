@@ -1,0 +1,35 @@
+.section-title-container {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title-container.centered {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-secondary);
+    margin-top: 1rem;
+}
+
+.centered .title-divider {
+    margin-left: auto;
+    margin-right: auto;
+}
